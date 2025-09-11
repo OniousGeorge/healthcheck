@@ -34,9 +34,10 @@ msg['Subject'] = subject
 
 msg.attach(MIMEText(body, 'plain'))
 
-with open('health.logs', 'rb') as f:
-    part=MIMEApplication(f.read(), Name='health.logs')
-    part['Content-Disposition'] = 'attachment; filename="health.logs"'
+with open('health.logs', 'r', encoding='utf-8') as f:
+    log_content = f.read()
+    part = MIMEText(log_content, 'plain')
+    part.add_header('Content-Disposition', 'attachment', filename='health.logs')
     msg.attach(part)
 
 with smtplib.SMTP('smtp.gmail.com', 587) as server:
