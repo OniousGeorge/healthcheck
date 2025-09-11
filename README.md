@@ -5,7 +5,7 @@ It collects CPU, memory, and system usage stats, checks for available updates, a
 
 Setup:
 1. Clone the repository:
-   git clone https://github.com/yourusername/healthcheck.git
+   git clone https://github.com/OniousGeorge/healthcheck.git
    cd healthcheck
 2. Make scripts executable:
    chmod +x *.sh
