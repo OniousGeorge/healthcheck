@@ -1,17 +1,16 @@
-Week of Mon Sep  1 21:55:22 EDT 2025
+Week of Thu Sep 11 13:02:36 EDT 2025
 
 
-current percentage of idle cpu usage: 99.94 percent
-current percentage of user-level cpu usage: 0.02 percent
-current percentage of system cpu usage: 0.03 percent
+current percentage of idle cpu usage:  percent
+current percentage of user-level cpu usage:  percent
+current percentage of system cpu usage:  percent
 
 
-Total memory: 3.82 GB 
-Memory Used: .41 GB 
-Memory Left: 3.41 GB 
+Total memory:  GB 
+Memory Used:  GB 
+Memory Left:  GB 
 
 
 Available Updates:
  
-Inst software-properties-common [0.99.49.2] (0.99.49.3 Ubuntu:24.04/noble-updates [all]) []
-Inst python3-software-properties [0.99.49.2] (0.99.49.3 Ubuntu:24.04/noble-updates [all])
+
