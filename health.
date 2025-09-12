@@ -1,2 +1,0 @@
-echo "current percentage of idle cpu: $idle percent" >> health.logs
-echo "current percentage of idle cpu: $idle percent" >> health.logs
