@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from dotenv import load_dotenv
+from pathlib import Path
 
 import os
 import smtplib
@@ -17,8 +18,9 @@ def get_env(*names):
             return v
     return None
     
-
-load_dotenv(dotenv_path="config.env")
+base_dir = Path(__file__).resolve().parent
+env_path = base_dir / 'config.env'
+load_dotenv(env_path)
 #email=os.getenv("email")
 email=get_env('email','Email','EMAIL')
 reciever_email=get_env('to_email','To_email','TO_EMAIL','Email_to')
@@ -27,8 +29,6 @@ subject=get_env('subject','Subject')
 body=get_env('body','BODY')
 provider=get_env('smtp_provider','SMTP_PROVIDER','Gmail')
 
-print(f"Email user:{email} \n password: {email_password} \n subject:{subject}\n body: {body}\nprovider: {provider}\n reciever_email: {reciever_email}")
-
 msg=MIMEMultipart()
 msg['From'] = email
 msg['To'] = reciever_email
@@ -36,7 +36,7 @@ msg['Subject'] = subject
 
 msg.attach(MIMEText(body, 'plain'))
 
-with open('health.logs', 'r', encoding='utf-8') as f:
+with open(base_dir / 'health.logs', 'r', encoding='utf-8') as f:
     log_content = f.read()
     part = MIMEText(log_content, 'plain')
     part.add_header('Content-Disposition', 'attachment', filename='health.logs')
